@@ -1,6 +1,6 @@
 # Motion Mode Switching Control in 4WISD Robots Based on Neural Vector Fields
 
-This repository contains the training implementation associated with the paper “Motion Mode Switching Control in 4WISD Robots based on Neural Vector Field with State Trajectory Regularization.” The code may be studied, modified, and reused, including for commercial applications, under the terms of the MIT License.
+This repository contains the training implementation associated with the paper “Motion Mode Switching Control in 4WISD Robots based on Neural Vector Field with State Trajectory Regularization.” The code is to facilitate understanding and reproduction of the training procedure, as well as reuse by the community, under the terms of the MIT License.
 
 The method uses TD3 for motion-mode switching control of a four-wheel-independent-steering-and-driving (4WISD) robot. The policy uses a neural vector field actor with state-attractor and control-misalignment trajectory regularization.
 
@@ -42,7 +42,7 @@ export ISAAC_SIM_PATH=/path/to/isaac-sim
 bash scripts/run_isaac_ui_velocity_training.sh /path/to/your_4wisd_scene.usd
 ```
 
-The optional second and third script arguments are the state publication rate and maximum simulation real-time factor. Their defaults are `20` Hz and `0` (unlimited).
+The optional second and third script arguments are the state publication rate and maximum simulation real-time factor. Their defaults are `20` Hz and `0` (unlimited, but not recommended; simulation and training rtf are supposed to be equal as much).
 
 In another terminal, activate the Conda environment, source the ROS 2 workspace, provide the URDF and optional RViz configuration, and launch training:
 
@@ -74,28 +74,10 @@ The primary implementation files are:
 - `scripts/isaac_agv_state_publisher_headless.py`: headless Isaac Sim bridge;
 - `scripts/isaac_agv_state_publisher_ui_velocity.py`: Isaac Sim UI bridge.
 
-## Reproducibility
 
-Training results depend on the configured random seeds, robot model, simulator version, hardware, and environment parameters.
-
-## Citation
-
-Replace the following placeholder after the paper is published or assigned a DOI:
-
-```bibtex
-@article{tan2026motion_mode_switching,
-  title   = {Motion Mode Switching Control in 4WISD Robots based on Neural Vector Field with State Trajectory Regularization},
-  author  = {Tan, Shuzhong and others},
-  journal = {TO BE REPLACED},
-  year    = {2026},
-  doi     = {TO BE REPLACED}
-}
-```
 
 ## License
 
 This project is released under the [MIT License](LICENSE).
 
-## Contact
 
-[YOUR_EMAIL]
