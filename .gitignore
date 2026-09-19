@@ -1,0 +1,73 @@
+# Python caches and build products
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+.conda/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+
+# Logs, generated data, and training artifacts
+*.log
+logs/
+log/
+data/
+runs/
+results/
+outputs/
+checkpoints/
+tensorboard/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.pickle
+*replay_buffer*
+events.out.tfevents.*
+
+# Archives and large simulation assets
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.usd
+*.usda
+*.usdc
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local
+config.local.*
+
+# ROS and Isaac generated files
+install/
+devel/
+.catkin_tools/
+.colcon/
+omni_logs/
+kit/cache/
+
+# Simulator and deployment infrastructure excluded from this core release
+/neural_vector_field/action_graph.py
+/neural_vector_field/check_agv_twist.py
+/neural_vector_field/isaac_robot_state_publisher.py
+/neural_vector_field/result_graph.py
+/neural_vector_field/test_vector_field_policy.py
